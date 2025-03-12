@@ -1,0 +1,33 @@
+{
+  "name": "assessment-1f-msk",
+  "version": "1.0.0",
+  "description": "Phase one assessment",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "jest": "jest -i",
+    "test-part-1": "jest part-1 -i",
+    "test-part-2": "jest part-2 -i",
+    "test-part-3": "jest part-3 -i",
+    "test-part-4": "jest part-4 -i",
+    "test": "npm run test-part-1 && npm run test-part-2 && npm run test-part-3 && npm run test-part-4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elbrus-Bootcamp/assessment-1f-msk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elbrus-Bootcamp/assessment-1f-msk/issues"
+  },
+  "homepage": "https://github.com/Elbrus-Bootcamp/assessment-1f-msk#readme",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "jest": "^29.2.2"
+  }
+ 
+}
