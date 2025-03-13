@@ -1,4 +1,11 @@
-const goods = []
+const goods = [
+  {
+    name: "test",
+    category: "фрукт",
+    price: 100,
+    count: "1",
+  },
+]
 
 const renderCatalog = () => {
   document.querySelector(".container").innerHTML = ""
@@ -19,7 +26,7 @@ const createGood = (good, index) => {
   const categoryFilter2 = document.querySelector("#categoryFilter2")
   const formUpdate = document.querySelector(".formUpdate")
 
-  if (!good.name.includes(input.value)) return
+  if (!good.name?.includes(input.value)) return
   if (!categoryFilter1.checked && good.category == categoryFilter1.value) return
   if (!categoryFilter2.checked && good.category == categoryFilter2.value) return
 
@@ -30,13 +37,15 @@ const createGood = (good, index) => {
     <p>${good.category}</p>
     <p>${good.price}</p>
     <p>${good.count}</p>
-    <button id='updateBtn${index}'>Update</button>
-    <button id='deleteBtn${index}'>Delete</button>
+    <div class='btns'>
+      <button id='updateBtn${index}'>Update</button>
+      <button id='deleteBtn${index}'>Delete</button>
+    </div>
     `
   document.querySelector(".container").appendChild(div)
 
   document.querySelector(`#updateBtn${index}`).addEventListener("click", () => {
-    formUpdate.style.display = 'flex'
+    formUpdate.style.display = "flex"
     document.querySelector("#updateId").textContent = index
     formUpdate.name.value = good.name
     formUpdate.category.value = good.category
@@ -78,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     goods[Number(document.querySelector("#updateId").textContent)] = good
     formUpdate.reset()
+    formUpdate.style.display = "none"
     renderCatalog()
   })
 
@@ -91,4 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
   categoryFilter2.addEventListener("change", () => {
     renderCatalog()
   })
+
+  renderCatalog()
 })

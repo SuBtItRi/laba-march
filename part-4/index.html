@@ -5,47 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XZ</title>
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h2 class="title">forms</h2>
     <div class="forms">
-      <h3>Craete</h3>
       <form action="" class="formCreate">
-        <input type="text" name="name" placeholder="Введите название..." required />
+        <h3>Craete</h3>
+        <input
+          type="text"
+          name="name"
+          placeholder="Введите название..."
+          required
+        />
         <div class="category">
           <input type="radio" name="category" value="фрукт" checked />
           <label for="">фрукт</label>
           <input type="radio" name="category" value="овощ" />
           <label for="">овощ</label>
         </div>
-        <input type="text" name="price" placeholder="Введиие прайс... " required />
-        <input type="text" name="count" placeholder="Введиие колличество... " required />
-        <input type="submit" value="Готово" >
+        <input
+          type="text"
+          name="price"
+          placeholder="Введиие прайс... "
+          required
+        />
+        <input
+          type="text"
+          name="count"
+          placeholder="Введиие колличество... "
+          required
+        />
+        <input type="submit" value="Готово" />
       </form>
-      <form action="" class="formUpdate" style="display: none;">
+      <form action="" class="formUpdate" style="display: none">
         <h3>Update <span id="updateId"></span></h3>
-        <input type="text" name="name" placeholder="Введите название..." required />
+        <input
+          type="text"
+          name="name"
+          placeholder="Введите название..."
+          required
+        />
         <div class="category">
           <input type="radio" name="category" value="фрукт" checked />
           <label for="">фрукт</label>
           <input type="radio" name="category" value="овощ" />
           <label for="">овощ</label>
         </div>
-        <input type="text" name="price" placeholder="Введиие прайс... " required />
-        <input type="text" name="count" placeholder="Введиие колличество... " required />
-        <input type="submit" value="Готово" >
+        <input
+          type="text"
+          name="price"
+          placeholder="Введиие прайс... "
+          required
+        />
+        <input
+          type="text"
+          name="count"
+          placeholder="Введиие колличество... "
+          required
+        />
+        <input type="submit" value="Готово" />
       </form>
     </div>
-    <h2>Контейнер</h2>
-    <input type="text" name="search" class="search" placeholder="Поиск..." />
-    <p>Кол-во продуктов: <span class="countGoods"></span></p>
-    <p>Кол-во стоимости всех продуктов: <span class="allPrice"></span></p>
+    <h2 class="title">Контейнер</h2>
+    <div class="info_block">
+      <input type="text" name="search" class="search" placeholder="Поиск..." />
+      <p>Кол-во продуктов: <span class="countGoods"></span></p>
+      <p>Кол-во стоимости всех продуктов: <span class="allPrice"></span></p>
+    </div>
     <div class="filters">
-        <input type="checkbox" value="фрукт" id="categoryFilter1" checked />
-        <label for="">фрукт</label>
-        <input type="checkbox" value="овощ" id="categoryFilter2" checked />
-        <label for="">овощ</label>
+      <input type="checkbox" value="фрукт" id="categoryFilter1" checked />
+      <label for="">фрукт</label>
+      <input type="checkbox" value="овощ" id="categoryFilter2" checked />
+      <label for="">овощ</label>
     </div>
     <div class="container"></div>
   </body>

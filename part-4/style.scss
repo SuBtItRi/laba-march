@@ -14,6 +14,10 @@ body {
   width: 100%;
   height: 100%;
   margin-top: 50px;
+  [type="checkbox"],
+  [type="radio"] {
+    cursor: pointer;
+  }
 }
 
 form {
@@ -21,12 +25,34 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  button {
-    width: 100%;
+  padding: 10px;
+  border: 1px solid blueviolet;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 15px;
+  border-radius: 10px;
+  background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(137, 43, 226, 0.5));
+
+  input {
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 15px;
+    outline: none;
+    background-color: aliceblue;
+    &[type="submit"] {
+      width: 100%;
+      background-color: rgb(162, 211, 255);
+      cursor: pointer;
+    }
+  }
+  .category {
+    display: flex;
+    gap: 10px;
   }
 }
 
 .forms {
+  display: flex;
+  gap: 30px;
   h3 {
     text-align: center;
     text-transform: uppercase;
@@ -34,5 +60,51 @@ form {
 }
 
 .title {
-    text-transform: uppercase;
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+.info_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.search {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 15px;
+  outline: none;
+  margin: 5px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.good {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 15px;
+  padding: 15px;
+  button {
+    width: 48.8%;
+    background-color: rgb(162, 211, 255);
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px;
+    outline: none;
+    background-color: aliceblue;
+  }
 }
